@@ -49,11 +49,15 @@ button:hover{
     background:#e91e63;
 }
 
+/* ข้อความด้านล่างสุด */
 .credit{
-    margin-top:20px;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
     color:white;
-    font-size:16px;
+    font-size:30px;
     font-weight:bold;
-    text-align:center;
-    opacity:0.8;
+    letter-spacing:2px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.5);
 }
