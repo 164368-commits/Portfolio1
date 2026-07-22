@@ -4,7 +4,7 @@ const btn = document.getElementById("btn");
 function toggleMusic() {
     if (music.paused) {
         music.play();
-        btn.innerHTML = "⏸ หยุดเพลง";
+        btn.innerHTML = "⏸ หยุดฟัง";
     } else {
         music.pause();
         btn.innerHTML = "▶ คลิกเพื่อฟัง";
