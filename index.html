@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Music Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff8fc5,#ffd6eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    text-align:center;
+}
+
+img{
+    width:250px;
+    height:250px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+    color:white;
+    margin:20px 0;
+}
+
+button{
+    padding:12px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:50px;
+    background:#ff2d75;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#ff0055;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- เปลี่ยนเป็นรูปของคุณ -->
+    <img src="753488043_1061224973104981_8973768081691554026_n.jpg" alt="รูปภาพ">
+
+    <h1>🎵 เพลงของเรา 🎵</h1>
+
+    <button onclick="toggleMusic()" id="btn">
+        ▶ เล่นเพลง
+    </button>
+
+</div>
+
+<!-- เปลี่ยนเป็นเพลงของคุณ -->
+<audio id="music">
+    <source src="AQPZA5BZpSUsB6aFiVBHsGmA44iTGY36E3YTawYbDb7zx4LNHDspK4DJC_yb0fBtpMdv7S-4l4X_69OyPLYR8HsG7SADX9CMAsUfyOiFmg.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const music = document.getElementById("music");
+const btn = document.getElementById("btn");
+
+function toggleMusic(){
+
+    if(music.paused){
+        music.play();
+        btn.innerHTML = "⏸ หยุดเพลง";
+    }else{
+        music.pause();
+        btn.innerHTML = "▶ เล่นเพลง";
+    }
+
+}
+</script>
+
+</body>
+</html>
